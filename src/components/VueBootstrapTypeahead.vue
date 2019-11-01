@@ -8,7 +8,7 @@
             </div>
             <input
                 ref="input"
-                type="search"
+                :type="inputType"
                 :class="`form-control ${inputClass}`"
                 :placeholder="placeholder"
                 :aria-label="placeholder"
@@ -98,7 +98,11 @@ export default {
     },
     placeholder: String,
     prepend: String,
-    append: String
+    append: String,
+    inputType: {
+      type: String,
+      default: 'search'
+    }
   },
 
   computed: {
