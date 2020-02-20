@@ -17,6 +17,7 @@
                 @blur="handleBlur"
                 @input="handleInput($event.target.value)"
                 autocomplete="off"
+                :autofocus="autofocusOnMount"
             />
             <div v-if="$slots.append || append" class="input-group-append">
                 <slot name="append">
@@ -102,6 +103,10 @@ export default {
     inputType: {
       type: String,
       default: 'search'
+    },
+    autofocusOnMount: {
+      type: Boolean,
+      default: false
     }
   },
 
@@ -196,6 +201,12 @@ export default {
     })
     this.$_ro.observe(this.$refs.input)
     this.$_ro.observe(this.$refs.list.$el)
+
+    if (this.autofocusOnMount) {
+      this.$nextTick(() => {
+        this.$refs.input.focus()
+      })
+    }
   },
 
   beforeDestroy() {
