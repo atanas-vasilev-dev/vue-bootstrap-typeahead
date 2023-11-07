@@ -20,7 +20,7 @@
 </template>
 
 <script>
-import VueBootstrapTypeahead from '../components/VueBootstrapTypeahead'
+import VueBootstrapTypeahead from '../components/VueBootstrapTypeahead.vue'
 
 export default {
   name: 'CountrySearch',

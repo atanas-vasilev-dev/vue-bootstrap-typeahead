@@ -103,7 +103,7 @@ export default {
 </template>
 
 <script>
-import CountrySearch from '../examples/CountrySearch'
+import CountrySearch from '../examples/CountrySearch.vue'
 
 export default {
   name: 'Home',

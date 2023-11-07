@@ -15,7 +15,7 @@ Vue.use(BootstrapVue)
 
 Vue.use(VueGtm, {
   id: 'UA-29172866-5',
-  enabled: process.env.NODE_ENV === 'production',
+  enabled: import.meta.env.NODE_ENV === 'production',
   vueRouter: router
 })
 

@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Home from './views/Home'
+import Home from './views/Home.vue'
 
 Vue.use(Router)
 
@@ -14,33 +14,33 @@ export default new Router({
     {
       path: '/reference',
       name: 'reference',
-      component: () => import(/* webpackChunkName: "reference" */ './views/Reference.vue')
+      component: () => import('./views/Reference.vue')
     },
     {
       path: '/examples',
-      component: () => import(/* webpackChunkName: "examples" */ './views/Examples.vue'),
+      component: () => import('./views/Examples.vue'),
       children: [
         {
           name: 'examples',
           path: '',
-          component: () => import(/* webpackChunkName: "examples" */ './examples/BasicExample.vue')
+          component: () => import('./examples/BasicExample.vue')
         },
         {
           path: 'basic-example',
-          component: () => import(/* webpackChunkName: "examples" */ './examples/BasicExample.vue')
+          component: () => import('./examples/BasicExample.vue')
         },
         {
           path: 'working-with-apis',
-          component: () => import(/* webpackChunkName: "examples" */ './examples/WorkingWithAPIs.vue')
+          component: () => import('./examples/WorkingWithAPIs.vue')
         },
         {
           path: 'prepending-and-appending',
-          component: () => import(/* webpackChunkName: "examples" */ './examples/PrependAppend.vue')
+          component: () => import('./examples/PrependAppend.vue')
         },
         {
           name: 'custom-suggestion-slot',
           path: 'custom-suggestion-slot',
-          component: () => import(/* webpackChunkName: "examples" */ './examples/CustomSuggestion.vue')
+          component: () => import('./examples/CustomSuggestion.vue')
         }
       ]
     }
