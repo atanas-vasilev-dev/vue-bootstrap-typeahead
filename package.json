@@ -30,7 +30,7 @@
   },
   "dependencies": {
     "resize-observer-polyfill": "^1.5.0",
-    "vue": "^2.5.17"
+    "vue": "^2.7.15"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^1.6.1",
@@ -45,7 +45,7 @@
     "vue-gtm": "^2.0.0",
     "vue-hljs": "^1.0.0",
     "vue-router": "^3.0.1",
-    "vue-template-compiler": "^2.5.17",
+    "vue-template-compiler": "^2.7.15",
     "whatwg-fetch": "^2.0.4"
   }
 }
